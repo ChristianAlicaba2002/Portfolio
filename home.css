@@ -153,9 +153,9 @@ span:nth-child(2) {
   content: "";
   position: absolute;
   width: 0;
-  height: 4.2vh;
+  height: 5vh;
   margin-top: -8%;
-  margin-left: -86%;
+  margin-left: -88%;
   background-color: var(--bgWhitecolor);
   transition: 0.3s ease-out;
   color: black;
