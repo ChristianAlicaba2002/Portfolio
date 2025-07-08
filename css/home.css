@@ -1,0 +1,222 @@
+:root {
+  --bgBlackcolor: rgb(23, 23, 23);
+  --bgWhitecolor: rgb(255, 255, 255);
+  --whiteColor: white;
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.nav-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--bgBlackcolor);
+  z-index: 1;
+}
+.logo-container {
+  margin: 0.1rem 0 0.1rem 5rem;
+  color: var(--whiteColor);
+}
+.category-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5rem 0 0;
+  padding: 1rem;
+}
+.category-container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+  gap: 3rem;
+}
+.category-container li {
+  padding: 0.5rem;
+  position: relative;
+}
+.category-container li:after {
+  content: "";
+  width: 0;
+  height: 2.5px;
+  background-color: var(--whiteColor);
+  border-radius: 10%;
+  position: absolute;
+  margin-top: 40%;
+  margin-left: -89%;
+  transition: 0.3s ease-in-out;
+}
+.category-container li:nth-child(2):after {
+  margin-top: 28%;
+}
+.category-container li:nth-child(3):after {
+  margin-top: 33%;
+}
+.category-container li:nth-child(4):after {
+  margin-top: 25%;
+}
+.category-container li:hover:after {
+  color: var(--whiteColor);
+  width: 100%;
+}
+
+.category-container a {
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--whiteColor);
+  font-size: medium;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+.category-container a:hover {
+  color: var(--whiteColor);
+  border: 0;
+  font-weight: bold;
+}
+.home-container {
+  width: 100%;
+  height: 100vh;
+  margin-top: -1%;
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  position: relative;
+}
+.home-details {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  max-width: 47%;
+  margin: 9% 0 0 5%;
+}
+.home-details h1 {
+  font-size: 4.5rem;
+  margin-bottom: 0;
+  color: var(--whiteColor);
+}
+
+#myCourse {
+  font-size: 2.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  color: white;
+  height: 5.6vh;
+  margin-bottom: -1rem;
+}
+
+.home-details p {
+  font-size: 1.3rem;
+  color: var(--whiteColor);
+}
+span:nth-child(1) {
+  color: rgb(98, 98, 255);
+}
+span:nth-child(2) {
+  color: #ff4772;
+}
+.link-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  border-radius: 10px;
+  width: 35%;
+}
+.link-container a {
+  position: relative;
+  color: var(--whiteColor);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(255, 255, 255);
+  z-index: 1;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.link-container a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4.2vh;
+  margin-top: -8%;
+  margin-left: -86%;
+  background-color: var(--bgWhitecolor);
+  transition: 0.3s ease-out;
+  color: black;
+  z-index: -1;
+  border-radius: 7px;
+}
+.link-container a:nth-child(2):after {
+  margin-left: -88%;
+}
+
+.link-container a:hover:after {
+  width: 100%;
+  color: black;
+}
+
+.link-container a:hover {
+  color: black;
+}
+
+.dots-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.about-container{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(12, 12, 12)
+}
+.image-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  float: right;
+  margin-left: 50%;
+  align-items: center;
+}
+.image-container img{
+  width: 60%;
+  height: 70%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px white;
+  animation: pulse 2.5s ease-in-out infinite alternate-reverse;
+}
+@keyframes pulse {
+    from{
+      box-shadow: 0 0 10px white;
+    }
+    to{
+      box-shadow: 0 0 25px white;
+    }
+}
